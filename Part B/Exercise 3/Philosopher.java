@@ -43,7 +43,8 @@ public class Philosopher extends Thread {
 			// Let's try to get the left chopstick
 			System.out.println(getName()+" wants left chopstick");
 			if (!left.Take(waitTime)) {
-                // If couldn't acquire left chopstick within waitTime, give up
+
+				//Wait Time 
                 System.out.println(getName() + " couldn't get left chopstick. Giving up.");
                 continue;
             }
@@ -62,8 +63,9 @@ public class Philosopher extends Thread {
 			// Ok, enough etiquette nonesense, now I need my right chopstick
 			System.out.println(getName()+" wants right chopstick");
 			if (!right.Take(waitTime)) {
-                // If couldn't acquire left chopstick within waitTime, give up
-                System.out.println(getName() + " couldn't get left chopstick. Giving up.");
+				
+                // Give up post wait time 
+                System.out.println(getName() + " unfortunalty couldn't get left chopstick. Now giving up:(");
                 continue; 
             }
 
